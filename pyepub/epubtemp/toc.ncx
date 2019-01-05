@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+ "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd"><ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="uid" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>{{ title }}</text>
+  </docTitle>
+  <navMap>
+    {% for item in navPoints %}
+    <navPoint id="navPoint-{{ item.play_order }}" playOrder="{{ item.play_order }}">
+      <navLabel>
+        <text>{{ item.text }}</text>
+      </navLabel>
+      <content src="{{ item.src }}"/>
+      {% for node in item.childs %}
+      <navPoint id="navPoint-{{ node.play_order }}" playOrder="{{ node.play_order }}">
+        <navLabel>
+          <text>{{ node.text }}</text>
+        </navLabel>
+        <content src="{{ node.src }}"/>
+        {% for nodechild in node.childs %}
+            <navPoint id="navPoint-{{ nodechild.play_order }}" playOrder="{{ nodechild.play_order }}">
+                <navLabel>
+                  <text>{{ nodechild.text }}</text>
+                </navLabel>
+                <content src="{{ nodechild.src }}"/>
+             </navPoint>
+        {% endfor %}
+      </navPoint>
+      {% endfor %}
+    </navPoint>
+    {% endfor %}
+  </navMap>
+</ncx>

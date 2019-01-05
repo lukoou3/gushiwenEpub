@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<head>
+  <link rel="stylesheet" href="../Styles/fonts.css" type="text/css"/>
+  <link rel="stylesheet" href="../Styles/style.css" type="text/css"/>
+  <title></title>
+<style type="text/css">
+.h2{
+    font-family: "h3";
+    font-weight: normal;
+    font-size: 1.55em;
+    margin-bottom: 0.7em;
+    margin-top: 1em;
+    color: #000000;
+	font-weight: 900;
+	text-indent: 0em;
+	duokan-text-indent: 0em;
+}
+.xbt {
+    text-align: left;
+    duokan-text-align: left;
+    text-indent: 0em;
+	line-height:100%;
+    duokan-text-indent: 0em;
+    margin: 1.35em 0 0.01em 0;
+    padding: 0 0 0.01em 0;
+    font-family: "h2";
+    color: #062df3;
+	font-weight: 800;
+}
+</style>
+</head>
+
+<body>
+	<p class="h2">{% if name %} {{ name }} {% endif %}</p>
+
+
+	{% if info %}
+	<p class="xbt">【简介】</p>
+	<p>{{ info }}</p>
+	{% endif %}
+
+
+</body>
+</html>

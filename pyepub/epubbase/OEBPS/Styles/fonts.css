@@ -1,0 +1,57 @@
+/** 字体定义 **/
+/*宋体（明體）*/
+@font-face {
+    font-family: "st";
+    src: local("st"),local("st"),local("SongTi"),local("Songti"),
+	local("正文"),local("宋体"),local("明体"),local("明朝"),
+	local("Songti"),local("Songti SC"),local("Songti TC"),
+	local("STSongti"),local("STSong"),local("Song S"),
+	local("STBShusong"),local("TBMincho"),
+	local("HYMyeongJo"),local("DK-SONGTI");
+}
+
+/*仿宋体（宋體）*/
+@font-face {
+    font-family: "fs";
+    src:url("../Fonts/fs.ttf"),
+   local("fs"),local("FangSong"),local("Fangsong"),
+   local("仿宋"),local("仿宋_GB18030"),local("仿宋_GB2312"),
+   local("STKai"),local("MKai PRC"),
+   local("DK-FANGSONG");
+}
+
+/*楷体（正體）*/
+@font-face {
+    font-family: "kt";
+    src: local("kt"),local("KaiTi"),local("STKaiti"),local("STKai"),
+	local("楷体"),local("楷体_GB18030"),local("楷体_GB2312"),
+	local("Kaiti"),local("Kaiti SC"),local("Kaiti TC"),
+	local("MKai PRC"),local("MKaiGB18030C-Medium"),
+	local("MKaiGB18030C-Bold"),local("DK-KAITI");
+}
+
+/*黑体（无衬线字体）*/
+@font-face {
+    font-family: "ht";
+    src:local("ht"),local("信黑 W4"),local("信黑"),
+	local("微软雅黑"),local("雅黑"),
+	local("STHeiti"),local("STHei"),
+	local("MYing Hei S"),local("TBGothic"),
+	local("Heiti"),local("Heiti SC"),local("Heiti TC"),
+	local("DK-HEITI");
+}
+
+/*大标宋*/
+@font-face {
+    font-family: "h2";
+    src:url("../Fonts/h2.ttf"),
+   local("h2"),local("Heading2"),local("Title2"),local("标题2"),
+   local("方正大标宋_GBK"),local("方正大标宋简体"),local("方正大标宋繁体"),
+   local("STKai"),local("MKai PRC"),
+   local("Songti"),local("Songti SC"),local("Songti TC"),
+   local("STSongti"),local("STSong"),local("Song S"),local("Song T"),
+   local("STBShusong"),local("TBMincho"),local("HYMyeongJo"),
+   local("DK-XIAOBIAOSONG");
+}
+
+.fs{font-family: "fs"}
