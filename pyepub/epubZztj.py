@@ -27,7 +27,7 @@ def navPoints_order(navPoints):
 
 parent_path = os.path.dirname(os.path.realpath(__file__))
 
-metadata = {"title":"古诗文","creator":"李奉超","publisher":"中国出版",
+metadata = {"title":"资治通鉴（注释版）","creator":"李奉超","publisher":"中国出版",
             "cover_jpg": "cover.jpg"}
 manifest = []
 
@@ -81,13 +81,13 @@ class EpubBook():
 
         for i,data in enumerate(datas,start=1):
             self.handle_data(data)
-            content = template_data.render(zhu_list=data["zhu_list"])
+            content = template_data.render(title=data["title"],zhu_list=data["zhu_list"])
             file_name = "bt-{}.html".format(i)
             with open(os.path.join(self.tmp_path, "OEBPS/Text/{}".format(file_name)), "w", encoding="utf-8") as fp:
                 fp.write(content)
                 manifest.append({"href": "Text/{}".format(file_name), "id": file_name,
                                  "media-type": "application/xhtml+xml"})
-        return
+        #return
 
         manifest.append({"href": "Text/result.html", "id": "result.html",
                          "title": "结束", "media-type": "application/xhtml+xml"})

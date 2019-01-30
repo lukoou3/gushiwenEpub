@@ -162,12 +162,19 @@ class EpubBook():
                 for k,data in enumerate(author_datas,start=1):
                     self.handle_data(data)
                     #template_data = env.get_template('Text/bt-temp.html')
+                    """
                     content = template_data.render(title=data.get("title"),tags="，".join(data.get("tags",[])),
                         dynasty=data.get("dynasty"),author=data.get("author"),
                         beijings=data.get("beijings",[]),
                         yizhu_cont=data.get("yizhu_cont"), yizhu_yi=data.get("yizhu_yi"),
                                 yizhu_zhu=data.get("yizhu_zhu"),yizhu_shang=data.get("yizhu_shang"),
                                 zhu_list=data.get("zhu_list",[]))
+                    """
+                    content = template_data.render(title=data.get("title"), tags="，".join(data.get("tags", [])),
+                                                   dynasty=data.get("dynasty"), author=data.get("author"),
+                                                   beijings=data.get("beijings", []),
+                                                   yizhu_cont=data.get("yizhu_cont"),
+                                                   zhu_list=data.get("zhu_list", []))
                     file_name = "bt-{}-{}-{}.html".format(i,j,k)
                     with open(os.path.join(self.tmp_path, "OEBPS/Text/{}".format(file_name)), "w", encoding="utf-8") as fp:
                         fp.write(content)

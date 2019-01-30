@@ -41,8 +41,10 @@
 </head>
 
 <body>
+
+	<p class="h2">{% if title %} {{ title }} {% endif %}</p>
+
 	{% for item in zhu_list %}
-	{% if loop.first %}<p class="xbt">【注文】</p>{% endif %}
 	{{ item.cont }}
 	{% endfor %}
 
